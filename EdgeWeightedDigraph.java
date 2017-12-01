@@ -68,13 +68,7 @@ public class EdgeWeightedDigraph {
     public EdgeWeightedDigraph(int V, int E) {
         this(V);
         if (E < 0) throw new IllegalArgumentException("Number of edges in a Digraph must be nonnegative");
-        for (int i = 0; i < E; i++) {
-            int v = StdRandom.uniform(V);
-            int w = StdRandom.uniform(V);
-            double weight = 0.01 * StdRandom.uniform(100);
-            DirectedEdge e = new DirectedEdge(v, w, weight);
-            addEdge(e);
-        }
+        
     }
 
     /**  
@@ -97,7 +91,7 @@ public class EdgeWeightedDigraph {
             int w = in.readInt();
             validateVertex(v);
             validateVertex(w);
-            double weight = in.readDouble();
+            int weight = in.readInt();
             addEdge(new DirectedEdge(v, w, weight));
         }
     }
