@@ -23,7 +23,7 @@
 public class DirectedEdge { 
     private final int v;
     private final int w;
-    private final int weight;
+    public  int weight;
 
     /**
      * Initializes a directed edge from vertex {@code v} to vertex {@code w} with
